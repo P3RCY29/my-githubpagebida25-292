@@ -1,0 +1,788 @@
+/* =====================
+   GLOBAL
+===================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.ff-navbar {
+    height: 70px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 !important;
+}
+
+.ff-logo {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.ff-brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+}
+
+.ff-nav-link {
+    font-size: 14px;
+    color: #555555;
+    text-decoration: none;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.ff-nav-link:hover,
+.ff-nav-link.active {
+    color: #1a1a1a;
+    border-bottom: 2px solid #1a1a1a;
+    font-weight: 600;
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.ff-btn-dark {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #ffffff !important;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #1a1a1a;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.ff-btn-dark:hover {
+    background: #333333;
+    border-color: #333333;
+}
+
+.ff-btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #1a1a1a !important;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #1a1a1a;
+    transition: all 0.2s;
+}
+
+.ff-btn-outline:hover {
+    background: #1a1a1a;
+    color: #ffffff !important;
+}
+
+.ff-btn-light {
+    display: inline-block;
+    background: #ffffff;
+    color: #1a1a1a !important;
+    padding: 10px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    transition: all 0.2s;
+}
+
+.ff-btn-light:hover {
+    background: transparent;
+    color: #ffffff !important;
+}
+
+/* =====================
+   PAGE HEADING
+===================== */
+.ff-page-heading {
+    background: #f5f5f5;
+    padding: 52px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ff-page-heading h1 {
+    font-size: 38px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.ff-page-heading p {
+    font-size: 15px;
+    color: #777777;
+    margin: 0;
+}
+
+/* =====================
+   HERO
+===================== */
+.ff-hero {
+    background: #f5f5f5;
+    padding: 80px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ff-hero-tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888888;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.ff-hero-heading {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.ff-hero-sub {
+    font-size: 15px;
+    color: #666666;
+    max-width: 460px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.ff-hero-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* =====================
+   STATS
+===================== */
+.ff-stats {
+    padding: 48px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ff-stat-item {
+    padding: 16px 24px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.ff-stat-item:last-child {
+    border-right: none;
+}
+
+.ff-stat-num {
+    font-size: 44px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.ff-stat-label {
+    font-size: 14px;
+    color: #777777;
+    margin: 0;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+.ff-section {
+    padding: 72px 0;
+}
+
+.ff-bg-light {
+    background: #f5f5f5;
+}
+
+.ff-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.ff-section-sub {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 8px;
+}
+
+.ff-body-text {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.8;
+}
+
+/* =====================
+   SERVICE CARDS
+===================== */
+.ff-service-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    height: 100%;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.ff-service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+}
+
+.ff-service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.ff-card-body {
+    padding: 20px;
+}
+
+.ff-card-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ff-card-body h5 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #1a1a1a;
+}
+
+.ff-card-body p {
+    font-size: 13px;
+    color: #777777;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.ff-price {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+}
+
+/* =====================
+   FILTER TABS
+===================== */
+.ff-filter-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ff-filter-btn {
+    padding: 8px 22px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px solid #1a1a1a;
+    background: transparent;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ff-filter-btn.active,
+.ff-filter-btn:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+/* =====================
+   CTA BANNER
+===================== */
+.ff-cta {
+    background: #1a1a1a;
+    padding: 60px 0;
+}
+
+.ff-cta-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.ff-cta-sub {
+    font-size: 15px;
+    color: #bbbbbb;
+    margin: 0;
+}
+
+/* =====================
+   ABOUT - STORY
+===================== */
+.ff-story-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* =====================
+   ABOUT - VALUES
+===================== */
+.ff-value-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 32px 24px;
+    text-align: center;
+    height: 100%;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.ff-value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+}
+
+.ff-value-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.ff-value-card h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.ff-value-card p {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* =====================
+   ABOUT - TEAM
+===================== */
+.ff-team-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #ffffff;
+    height: 100%;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.ff-team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+}
+
+.ff-team-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.ff-team-body {
+    padding: 18px;
+    text-align: center;
+}
+
+.ff-team-body h5 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+}
+
+.ff-team-body p {
+    font-size: 13px;
+    color: #888888;
+    margin: 0;
+}
+
+/* =====================
+   PROMOTIONS
+===================== */
+.ff-promo-card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 30px;
+    height: 100%;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.ff-promo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.09);
+}
+
+.ff-promo-badge {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+}
+
+.ff-promo-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.ff-promo-card p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.ff-promo-expiry {
+    font-size: 12px !important;
+    color: #999999 !important;
+    font-style: italic;
+}
+
+/* =====================
+   FORMS
+===================== */
+.ff-form-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 36px;
+}
+
+.ff-info-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 36px;
+    height: 100%;
+}
+
+.ff-form-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.ff-field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ff-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444444;
+}
+
+.ff-field input,
+.ff-field select,
+.ff-field textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #1a1a1a;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.ff-field input:focus,
+.ff-field select:focus,
+.ff-field textarea:focus {
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 3px rgba(26,26,26,0.08);
+}
+
+.ff-field input.error,
+.ff-field select.error,
+.ff-field textarea.error {
+    border-color: #e53935;
+}
+
+.ff-error {
+    font-size: 12px;
+    color: #e53935;
+    display: none;
+}
+
+.ff-error.visible {
+    display: block;
+}
+
+.ff-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 20px 0;
+}
+
+.ff-note {
+    font-size: 13px;
+    color: #888888;
+    line-height: 1.6;
+}
+
+/* =====================
+   BOOKING INFO
+===================== */
+.ff-hours {
+    margin-bottom: 8px;
+}
+
+.ff-hour-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555555;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ff-info-card h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.ff-info-card p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 4px;
+}
+
+/* =====================
+   CONTACT
+===================== */
+.ff-contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.ff-contact-icon {
+    width: 44px;
+    height: 44px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.ff-contact-row strong {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+}
+
+.ff-contact-row p {
+    font-size: 13px;
+    color: #666666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.ff-social-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.ff-social-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.ff-social-btn:hover {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.ff-map-box iframe {
+    width: 100%;
+    height: 220px;
+    border-radius: 10px;
+    border: none;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.ff-footer {
+    background: #f5f5f5;
+    padding: 56px 0 24px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.ff-footer-brand {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.ff-footer p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 4px;
+}
+
+.ff-footer-heading {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 14px;
+}
+
+.ff-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ff-footer-links li {
+    margin-bottom: 8px;
+}
+
+.ff-footer-links a {
+    font-size: 13px;
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.ff-footer-links a:hover {
+    color: #1a1a1a;
+}
+
+.ff-footer-bottom {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    margin-top: 24px;
+}
+
+.ff-footer-bottom p {
+    font-size: 12px;
+    color: #999999;
+    margin: 0;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 992px) {
+    .ff-navbar {
+        height: auto;
+        padding: 12px 0 !important;
+    }
+
+    .ff-hero {
+        padding: 50px 0;
+    }
+
+    .ff-hero-heading {
+        font-size: 38px;
+    }
+
+    .ff-hero-img {
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .ff-cta {
+        padding: 40px 0;
+    }
+
+    .ff-cta .container-fluid {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .ff-hero-heading {
+        font-size: 32px;
+    }
+
+    .ff-stat-item {
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 20px 0;
+    }
+
+    .ff-stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .ff-section {
+        padding: 48px 0;
+    }
+
+    .ff-form-card,
+    .ff-info-card {
+        padding: 24px;
+    }
+
+    .ff-page-heading h1 {
+        font-size: 28px;
+    }
+}
