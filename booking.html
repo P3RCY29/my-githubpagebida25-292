@@ -1,199 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Book an appointment at Factory Fades Barbershop in Letlhakane."/>
-    <title>Factory Fades | Booking</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Book Your Appointment | Factory Fades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg">
 </head>
-
 <body>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="images/logo.png" alt="Factory Fades Logo" width="60" height="60" style="border-radius:50%; margin-right:10px;">
-            <span class="brand-name">Factory Fades</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="promotions.html">Promotions</a></li>
-                <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-                <li class="nav-item ms-3">
-                    <a href="booking.html" class="btn btn-dark px-4">Book Now</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<!-- PAGE HEADING -->
-<section class="page-heading">
-    <div class="container">
-        <h1>Book An Appointment</h1>
-        <p>Fill in the form below to schedule your visit</p>
-    </div>
-</section>
-
-<!-- BOOKING FORM -->
-<section class="booking-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 mb-4">
-                <div class="booking-form-card">
-                    <h4>Your Details</h4>
-                    <form id="bookingForm" novalidate>
-
-                        <div class="mb-3">
-                            <label for="fullName" class="form-label">Full Name *</label>
-                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
-                            <div class="invalid-feedback">Please enter your full name.</div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number *</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
-                            <div class="invalid-feedback">Please enter your phone number.</div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="service" class="form-label">Select Service *</label>
-                            <select class="form-select" id="service" name="service" required>
-                                <option value="">-- Choose a service --</option>
-                                <option value="skin-fade">Skin Fade - P100</option>
-                                <option value="taper">Taper Cut - P80</option>
-                                <option value="full-cut">Full Cut - P70</option>
-                                <option value="ladies">Ladies Cut - P100</option>
-                                <option value="braids">Braids - P150</option>
-                                <option value="beard">Beard Shave - P50</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a service.</div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="barber" class="form-label">Select Barber *</label>
-                            <select class="form-select" id="barber" name="barber" required>
-                                <option value="">-- Choose a barber --</option>
-                                <option value="barber1">Thabo</option>
-                                <option value="barber2">kago</option>
-                                <option value="barber3">bokamoso</option>
-                                <option value="barber4">Katlego</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a barber.</div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="date" class="form-label">Preferred Date *</label>
-                            <input type="date" class="form-control" id="date" name="date" required>
-                            <div class="invalid-feedback">Please select a date.</div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="time" class="form-label">Preferred Time *</label>
-                            <select class="form-select" id="time" name="time" required>
-                                <option value="">-- Choose a time --</option>
-                                <option value="09:00">09:00 AM</option>
-                                <option value="10:00">10:00 AM</option>
-                                <option value="11:00">11:00 AM</option>
-                                <option value="12:00">12:00 PM</option>
-                                <option value="14:00">02:00 PM</option>
-                                <option value="15:00">03:00 PM</option>
-                                <option value="16:00">04:00 PM</option>
-                                <option value="17:00">05:00 PM</option>
-                            </select>
-                            <div class="invalid-feedback">Please select a time.</div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="notes" class="form-label">Additional Notes</label>
-                            <textarea class="form-control" id="notes" name="notes" rows="4" placeholder="Any special requests or notes..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-dark w-100 py-2">Confirm Booking</button>
-
-                    </form>
-                </div>
-            </div>
-
-            <div class="col-lg-5 mb-4">
-                <div class="booking-info-card">
-                    <h4>Opening Hours</h4>
-                    <ul class="hours-list">
-                        <li><span>Monday - Friday</span><span>8:00am - 6:00pm</span></li>
-                        <li><span>Saturday</span><span>8:00am - 5:00pm</span></li>
-                        <li><span>Sunday</span><span>8:00am - 1:00pm</span></li>
-                    </ul>
-                    <hr>
-                    <h4>Location</h4>
-                    <p>Letlhakane, Next to Bus Rank</p>
-                    <hr>
-                    <h4>Contact</h4>
-                    <p>+267 74 859 357</p>
-                    <p>factoryfades@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h5 class="footer-brand">Factory Fades</h5>
-                <p>Premium barbershop in Letlhakane, next to the Bus Rank.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <h6>Quick Links</h6>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="promotions.html">Promotions</a></li>
-                    <li><a href="booking.html">Booking</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.jpg" alt="Factory Fades Logo" style="height: 48px; width: auto; border-radius: 8px;">
+                <span class="ms-2 fw-bold">FACTORY FADES</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promotions.html">Promotions</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-            <div class="col-md-4 text-end">
-                <h6>Contact</h6>
-                <p>Letlhakane, Next to Bus Rank</p>
-                <p>+267 74 859 357</p>
-                <p>factoryfades@gmail.com</p>
+                <div class="ms-lg-4 mt-3 mt-lg-0">
+                    <a href="booking.html" class="btn btn-gold btn-sm px-4">Book Appointment</a>
+                </div>
             </div>
         </div>
-        <div class="text-center mt-3">
-            <p class="copyright">© 2026 Factory Fades. All rights reserved.</p>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <span class="badge bg-gold text-black px-3 py-2">
+                        <img src="images/store.jpg" alt="Store" style="height: 20px; width: auto; margin-right: 5px;">
+                        ONLINE BOOKING
+                    </span>
+                    <h1 class="fw-bold mt-3">Book Your Appointment</h1>
+                    <p class="lead text-muted">Choose your service, pick a time, and we’ll see you soon. No queues, no waiting.</p>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-4 p-md-5">
+                        <form id="bookingForm">
+                            <div class="row g-3">
+                                <!-- Service Selection -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Select Service <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="">Choose a service...</option>
+                                        <optgroup label="Men's Services">
+                                            <option value="high-fade">Skin Fade - BWP 100</option>
+                                            <option value="textured-crop">Taper Fade - BWP 100</option>
+                                            <option value="pompadour">Low Fade Pompadour - BWP 95</option>
+                                            <option value="buzz-cut">Buzz Cut + Design - BWP 70</option>
+                                            <option value="beard-trim">Beard Trim &amp; Shape - BWP 55</option>
+                                            <option value="kids-cut">Kids Cut (Under 12) - BWP 60</option>
+                                        </optgroup>
+                                        <optgroup label="Women's Services">
+                                            <option value="pixie-cut">Chic Pixie Cut - BWP 120</option>
+                                            <option value="short-bob">Ladies cut - BWP 100</option>
+                                            <option value="undercut">Undercut with Design - BWP 150</option>
+                                            <option value="asymmetrical">Asymmetrical Crop - BWP 120</option>
+                                        </optgroup>
+                                        
+                                    </select>
+                                </div>
+
+                                <!-- Preferred Barber -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Preferred Barber (Optional)</label>
+                                    <select class="form-select" id="barber" name="barber">
+                                        <option value="">No preference</option>
+                                        <option value="percy">Alfred </option>
+                                        <option value="thato">Thato </option>
+                                        <option value="kagiso">Kagiso</option>
+                                    </select>
+                                </div>
+
+                                <!-- Date -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Preferred Date <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="date" name="date" required min="">
+                                </div>
+
+                                <!-- Time -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Preferred Time <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="time" name="time" required>
+                                        <option value="">Select time...</option>
+                                        <option value="08:00">08:00 AM</option>
+                                        <option value="08:30">08:30 AM</option>
+                                        <option value="09:00">09:00 AM</option>
+                                        <option value="09:30">09:30 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="10:30">10:30 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="11:30">11:30 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="12:30">12:30 PM</option>
+                                        <option value="13:00">01:00 PM</option>
+                                        <option value="13:30">01:30 PM</option>
+                                        <option value="14:00">02:00 PM</option>
+                                        <option value="14:30">02:30 PM</option>
+                                        <option value="15:00">03:00 PM</option>
+                                        <option value="15:30">03:30 PM</option>
+                                        <option value="16:00">04:00 PM</option>
+                                        <option value="16:30">04:30 PM</option>
+                                        <option value="17:00">05:00 PM</option>
+                                        <option value="17:30">05:30 PM</option>
+                                    </select>
+                                </div>
+
+                                <!-- Personal Info -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Phone Number <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+267 71 234 567" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Special Requests / Notes</label>
+                                    <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="E.g. First time client, want a high fade with textured top, allergic to certain products..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-check mt-4 mb-3">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label small" for="terms">
+                                    I agree to the <a href="#" class="text-gold">cancellation policy</a> and confirm this is a real booking request.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold btn-lg w-100 py-3 fw-bold">
+                                <i class="fas fa-calendar-check me-2"></i> CONFIRM BOOKING
+                            </button>
+                            
+                            <p class="text-center small text-muted mt-3 mb-0">You will receive a confirmation SMS and email within 5 minutes.</p>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <p class="small text-muted">Need help? Call us at <a href="tel:+26771234567" class="text-gold fw-semibold">+267 71 234 567</a> or WhatsApp</p>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-const form = document.getElementById('bookingForm');
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    if (!form.checkValidity()) {
-        e.stopPropagation();
-        form.classList.add('was-validated');
-    } else {
-        alert('Booking confirmed! We will contact you shortly.');
-        form.reset();
-        form.classList.remove('was-validated');
-    }
-});
-</script>
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-0 bg-gold text-black">
+                    <h5 class="modal-title fw-bold"><i class="fas fa-check-circle me-2"></i> Booking Confirmed!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-calendar-check fa-4x text-gold"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">You're all set, <span id="modalName"></span>!</h4>
+                    <p class="mb-1">Your appointment for <strong id="modalService"></strong> has been booked for:</p>
+                    <p class="fs-5 fw-semibold text-gold mb-4" id="modalDateTime"></p>
+                    
+                    <div class="alert alert-light border text-start small">
+                        <strong>What happens next?</strong><br>
+                        • You will receive a confirmation SMS &amp; email shortly.<br>
+                        • Please arrive 5 minutes early.<br>
+                        • If you need to reschedule, call us at least 4 hours in advance.
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-gold px-5" data-bs-dismiss="modal">Done</button>
+                    <a href="index.html" class="btn btn-outline-secondary px-4">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/images/logo.jpg" alt="Logo" style="height: 42px; border-radius: 6px;" class="me-2">
+                        <span class="fw-bold text-white fs-4">FACTORY FADES</span>
+                    </div>
+                    <p class="small">Premium barbershop offering modern hairstyles for men and women of all ages in Letlhakane.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="about.html">Our Story</a></li>
+                        <li class="mb-2"><a href="services.html">Services &amp; Prices</a></li>
+                        <li class="mb-2"><a href="promotions.html">Current Deals</a></li>
+                        <li class="mb-2"><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-gold"></i> Next to Bus Rank, Letlhakane, Botswana</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2 text-gold"></i> +267 71 234 567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2 text-gold"></i> hello@factoryfades.co.bw</li>
+                        <li><i class="fas fa-clock me-2 text-gold"></i> Mon–Sat: 8:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p class="small">Get 10% off your first visit + style tips straight to your inbox.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control-sm" placeholder="Your email">
+                        <button class="btn btn-gold btn-sm" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start small">
+                    &copy; 2026 Factory Fades. All rights reserved. | Designed with ❤️ for Letlhakane
+                </div>
+                <div class="col-md-6 text-center text-md-end small mt-2 mt-md-0">
+                    <a href="#" class="text-decoration-none text-muted">Privacy</a> • 
+                    <a href="#" class="text-decoration-none text-muted">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date();
+        const minDate = today.toISOString().split('T')[0];
+        dateInput.setAttribute('min', minDate);
+        dateInput.value = minDate; // default to today
+
+        // Handle form submission
+        const bookingForm = document.getElementById('bookingForm');
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const serviceSelect = document.getElementById('service');
+            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const barber = document.getElementById('barber').value || 'Any available barber';
+            
+            // Format date nicely
+            const dateObj = new Date(date);
+            const formattedDate = dateObj.toLocaleDateString('en-GB', { 
+                weekday: 'long', 
+                day: 'numeric', 
+                month: 'long' 
+            });
+            
+            // Populate modal
+            document.getElementById('modalName').textContent = name.split(' ')[0];
+            document.getElementById('modalService').textContent = serviceText;
+            document.getElementById('modalDateTime').innerHTML = `${formattedDate} at <strong>${time}</strong><br><small>with ${barber}</small>`;
+            
+            // Show success modal
+            successModal.show();
+            
+            // Reset form after modal closes (optional)
+            document.getElementById('successModal').addEventListener('hidden.bs.modal', function () {
+                bookingForm.reset();
+                dateInput.value = minDate;
+            }, { once: true });
+            
+            // In a real app, you would send this data to a server here
+            console.log('Booking submitted:', {
+                service: serviceText,
+                name: name,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                date: date,
+                time: time,
+                barber: barber,
+                notes: document.getElementById('notes').value
+            });
+        });
+
+        // Optional: Pre-fill service if coming from services page with ?service=xxx
+        const urlParams = new URLSearchParams(window.location.search);
+        const preService = urlParams.get('service');
+        if (preService) {
+            const serviceSelect = document.getElementById('service');
+            for (let i = 0; i < serviceSelect.options.length; i++) {
+                if (serviceSelect.options[i].value === preService) {
+                    serviceSelect.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+    </script>
 </body>
 </html>

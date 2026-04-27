@@ -114,9 +114,7 @@ body {
 
 .service-card img, .promo-card img {
   height: 250px;
-  width: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
 .service-card .price {
