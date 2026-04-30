@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Appointment | Factory Fades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-uppercase">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/images/logo.jpg" alt="Factory Fades Logo" style="height: 48px; width: auto; border-radius: 8px;">
-                <span class="ms-2 fw-bold">FACTORY FADES</span>
+                <img src="assets/images/logo.svg" alt="Factory Fades Logo" width="44" height="44" class="rounded-2">
+                <span class="ms-2 d-none d-sm-inline fw-bold" style="letter-spacing: 0.1em;">FACTORY FADES</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -26,31 +28,39 @@
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="promotions.html">Promotions</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="booking.html">Book Now</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                 </ul>
-                <div class="ms-lg-4 mt-3 mt-lg-0">
-                    <a href="booking.html" class="btn btn-gold btn-sm px-4">Book Appointment</a>
+                <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <a href="booking.html" class="btn btn-gold btn-sm px-4 text-uppercase fw-bold" style="letter-spacing: 0.1em; font-size: 0.75rem;">Book Now</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="text-center mb-5">
-                    <span class="badge bg-gold text-black px-3 py-2">
-                        <img src="images/store.jpg" alt="Store" style="height: 20px; width: auto; margin-right: 5px;">
-                        ONLINE BOOKING
-                    </span>
-                    <h1 class="fw-bold mt-3">Book Your Appointment</h1>
-                    <p class="lead text-muted">Choose your service, pick a time, and we’ll see you soon. No queues, no waiting.</p>
+    <section class="py-4 py-lg-5 border-bottom border-secondary border-opacity-25">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <p class="small text-gold text-uppercase mb-2" style="letter-spacing: 0.2em;">Online booking</p>
+                    <h1 class="text-white mb-3" style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 3.25rem); letter-spacing: 0.06em;">Book an appointment</h1>
+                    <p class="text-muted mb-0">Choose your service, barber, date, and time — we’ll confirm by SMS &amp; email.</p>
                 </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual mb-0">
+                        <img src="images/Jaques barbershop.jpg" alt="Lead barber Alfred" class="w-100" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Booking Form -->
-                <div class="card border-0 shadow-lg">
+    <div class="container py-5">
+        <div class="row g-4 g-lg-5">
+            <div class="col-lg-7">
+                <div class="card border-0 service-card h-100">
                     <div class="card-body p-4 p-md-5">
+                        <h2 class="h5 text-uppercase mb-4" style="letter-spacing: 0.12em;">Appointment details</h2>
                         <form id="bookingForm">
                             <div class="row g-3">
                                 <!-- Service Selection -->
@@ -90,7 +100,7 @@
                                 <!-- Date -->
                                 <div class="col-md-6">
                                     <label class="form-label fw-semibold">Preferred Date <span class="text-danger">*</span></label>
-                                    <input type="date" class="form-control" id="date" name="date" required min="">
+                                    <input type="date" class="form-control" id="date" name="date" required>
                                 </div>
 
                                 <!-- Time -->
@@ -157,9 +167,36 @@
                         </form>
                     </div>
                 </div>
-
                 <div class="text-center mt-4">
-                    <p class="small text-muted">Need help? Call us at <a href="tel:+26771234567" class="text-gold fw-semibold">+267 71 234 567</a> or WhatsApp</p>
+                    <p class="small text-muted">Need help? <a href="tel:+26771234567" class="text-gold fw-semibold">+267 71 234 567</a></p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="booking-calendar-panel h-100 mb-4">
+                    <div class="cal-head text-white">
+                        <span class="opacity-75"><i class="fas fa-chevron-left fa-sm"></i></span>
+                        <span>April 2026</span>
+                        <span class="opacity-75"><i class="fas fa-chevron-right fa-sm"></i></span>
+                    </div>
+                    <p class="small text-muted text-center mb-3">Pick your preferred date on the booking form — use this preview as a quick reference.</p>
+                    <div class="cal-grid mb-1">
+                        <span class="cal-dow">S</span>
+                        <span class="cal-dow">M</span>
+                        <span class="cal-dow">T</span>
+                        <span class="cal-dow">W</span>
+                        <span class="cal-dow">T</span>
+                        <span class="cal-dow">F</span>
+                        <span class="cal-dow">S</span>
+                    </div>
+                    <div class="cal-grid pb-3 border-bottom border-secondary border-opacity-25">
+                        <span class="cal-day"></span><span class="cal-day"></span><span class="cal-day"></span><span class="cal-day"></span><span class="cal-day"></span><span class="cal-day">1</span><span class="cal-day">2</span>
+                        <span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span><span class="cal-day">7</span><span class="cal-day">8</span><span class="cal-day">9</span>
+                        <span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span><span class="cal-day active">14</span><span class="cal-day">15</span><span class="cal-day">16</span>
+                        <span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day">20</span><span class="cal-day">21</span><span class="cal-day">22</span><span class="cal-day">23</span>
+                        <span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span><span class="cal-day">28</span><span class="cal-day">29</span><span class="cal-day">30</span>
+                    </div>
+                    <p class="small text-muted mb-0 mt-3 text-center"><i class="fas fa-calendar-alt text-gold me-1"></i> Booking calendar</p>
                 </div>
             </div>
         </div>
@@ -196,22 +233,22 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="mt-5">
-        <div class="container">
+    <div class="cta-strip">
+        <div class="container cta-inner">
+            <p class="text-white">Ready for your fresh cut? Book your appointment today</p>
+            <a href="booking.html" class="btn btn-gold btn-sm px-4 text-uppercase fw-bold" style="letter-spacing: 0.1em; font-size: 0.75rem;">Book Now</a>
+        </div>
+    </div>
+
+    <footer class="mt-0">
+        <div class="container py-5">
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="assets/images/logo.jpg" alt="Logo" style="height: 42px; border-radius: 6px;" class="me-2">
+                        <img src="assets/images/logo.svg" alt="Logo" width="42" height="42" class="me-2 rounded-2">
                         <span class="fw-bold text-white fs-4">FACTORY FADES</span>
                     </div>
                     <p class="small">Premium barbershop offering modern hairstyles for men and women of all ages in Letlhakane.</p>
-                    <div class="social-icons mt-3">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
                 </div>
                 
                 <div class="col-lg-2 col-md-4">
@@ -248,7 +285,7 @@
             
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start small">
-                    &copy; 2026 Factory Fades. All rights reserved. | Designed with ❤️ for Letlhakane
+                    &copy; 2026 Factory Fades · Letlhakane
                 </div>
                 <div class="col-md-6 text-center text-md-end small mt-2 mt-md-0">
                     <a href="#" class="text-decoration-none text-muted">Privacy</a> • 
@@ -258,7 +295,10 @@
         </div>
     </footer>
 
+    <button type="button" id="scrollTopBtn" class="scroll-top-btn" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
     <script>
         // Set minimum date to today
         const dateInput = document.getElementById('date');
@@ -280,7 +320,9 @@
             const name = document.getElementById('name').value;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
-            const barber = document.getElementById('barber').value || 'Any available barber';
+            const barberVal = document.getElementById('barber').value;
+            const barberNames = { percy: 'Alfred', thato: 'Thato', kagiso: 'Kagiso' };
+            const barber = barberVal ? (barberNames[barberVal] || barberVal) : 'Any available barber';
             
             // Format date nicely
             const dateObj = new Date(date);
@@ -332,3 +374,4 @@
     </script>
 </body>
 </html>
+

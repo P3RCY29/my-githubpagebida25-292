@@ -1,0 +1,424 @@
+/* Factory Fades - Premium Black Theme */
+:root {
+  --gold: #C9A027;
+  --black: #000000;
+  --dark: #0F0F0F;
+  --charcoal: #1A1A1A;
+  --text: #F8F9FA;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--black) !important;
+  color: var(--text);
+}
+
+.hero-display {
+  font-family: 'Bebas Neue', 'Impact', sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  font-size: clamp(2.75rem, 8vw, 4.25rem);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.bg-gold {
+  background-color: var(--gold) !important;
+}
+
+.text-gold {
+  color: var(--gold) !important;
+}
+
+.border-gold {
+  border-color: var(--gold) !important;
+}
+
+.navbar {
+  background-color: var(--black) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.navbar .nav-link {
+  color: rgba(248, 249, 250, 0.85) !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--gold) !important;
+}
+
+.navbar-brand {
+  color: var(--gold) !important;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+}
+
+.nav-uppercase .nav-link {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.65rem !important;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  min-height: 650px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(15,15,15,0.85);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0;
+}
+
+/* Wireframe-style split hero (full-bleed, no dark overlay on whole section) */
+.hero-split {
+  min-height: auto;
+  padding: 3.5rem 0 4rem;
+  background: linear-gradient(180deg, #0a0a0a 0%, #080808 100%);
+}
+
+.hero-split::before {
+  display: none;
+}
+
+.hero-split .hero-visual {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 160, 39, 0.2);
+  aspect-ratio: 4/3;
+  max-height: 420px;
+}
+
+.hero-split .hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Generic responsive hero images (used on About/Booking/Contact) */
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stats-strip {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: #0d0d0d;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.75rem 0.5rem;
+}
+
+.stat-item .num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+.stat-item .lbl {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(248, 249, 250, 0.55);
+  margin-top: 0.35rem;
+}
+
+.cta-strip {
+  background: #000;
+  border-top: 1px solid rgba(201, 160, 39, 0.35);
+  padding: 1.25rem 0;
+}
+
+.cta-strip .cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cta-strip p {
+  margin: 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.page-intro {
+  padding: 3rem 0 2rem;
+  background: linear-gradient(180deg, #0f0f0f, #0a0a0a);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.page-intro h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  letter-spacing: 0.06em;
+}
+
+.booking-calendar-panel {
+  background: var(--charcoal);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-height: 420px;
+}
+
+.booking-calendar-panel .cal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.booking-calendar-panel .cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.35rem;
+  text-align: center;
+  font-size: 0.75rem;
+  align-items: center;
+}
+
+.booking-calendar-panel .cal-dow {
+  color: rgba(248,249,250,0.45);
+  padding: 0.35rem 0;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.booking-calendar-panel .cal-day {
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  color: rgba(248,249,250,0.35);
+}
+
+.booking-calendar-panel .cal-day.active {
+  background: var(--gold);
+  color: var(--black);
+  font-weight: 700;
+}
+
+.contact-hero-img {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 160, 39, 0.2);
+  max-height: 280px;
+}
+
+.contact-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.map-embed-clean {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #333;
+  min-height: 220px;
+}
+
+.service-card, .promo-card {
+  background-color: var(--charcoal);
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card .card-img-top {
+  height: 220px;
+  width: 100%;
+  object-fit: contain; /* Avoid "zoomed" look caused by cover-cropping */
+  background: #0f0f0f;
+}
+
+/* Smaller haircut thumbnails row (quick services) */
+.quick-services-row .service-card .card-img-top {
+  height: 110px;
+  width: 100%;
+  object-fit: contain; /* Avoid blur/zoom from cover-cropping */
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(201,160,39,0.25);
+}
+
+.price {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--black);
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 50px;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: #B38F1F;
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light:hover {
+  color: var(--black);
+}
+
+section.bg-light {
+  background-color: #141414 !important;
+}
+
+section.bg-light h2,
+section.bg-light .text-muted {
+  color: var(--text) !important;
+}
+
+section.bg-light .text-muted {
+  opacity: 0.75;
+}
+
+footer {
+  background-color: var(--black);
+  color: rgba(248, 249, 250, 0.8);
+  padding: 3rem 0 2rem;
+}
+
+footer h5 {
+  color: var(--gold);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: rgba(248, 249, 250, 0.75);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--gold);
+}
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1030;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--gold);
+  color: var(--black);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top-btn:hover {
+  background: #B38F1F;
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+.form-control, .form-select {
+  background-color: var(--charcoal);
+  border: 1px solid #444;
+  color: white;
+}
+
+.form-control::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 0.25rem rgba(201,160,39,0.25);
+  background-color: var(--charcoal);
+  color: white;
+}
+
+.form-label {
+  color: var(--text);
+}
+
+.form-check-label {
+  color: rgba(248, 249, 250, 0.85);
+}
+
+.text-muted {
+  color: rgba(248, 249, 250, 0.55) !important;
+}
+
+.card {
+  background-color: var(--charcoal);
+  color: var(--text);
+}
+
+.modal-content {
+  background-color: var(--charcoal);
+  color: var(--text);
+}
+
+.modal-header.bg-gold .btn-close {
+  filter: invert(1);
+}
+
+.alert-light {
+  background-color: #252525 !important;
+  border-color: #444 !important;
+  color: var(--text) !important;
+}
+
