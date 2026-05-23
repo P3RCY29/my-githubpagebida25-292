@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Factory Fades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/FACTORY%20FADES%20LOGO.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-uppercase">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/FACTORY%20FADES%20LOGO.png" alt="Factory Fades Logo" width="44" height="44" class="rounded-2">
+                <span class="ms-2 d-none d-sm-inline fw-bold" style="letter-spacing: 0.1em;">FACTORY FADES</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promotions.html">Promotions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <a href="booking.html" class="btn btn-gold btn-sm px-4 text-uppercase fw-bold" style="letter-spacing: 0.1em; font-size: 0.75rem;">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-4 py-lg-5 border-bottom border-secondary border-opacity-25">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <p class="small text-gold text-uppercase mb-2" style="letter-spacing: 0.2em;">Get in touch</p>
+                    <h1 class="text-white mb-3" style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.25rem, 5vw, 3rem); letter-spacing: 0.08em;">Contact us</h1>
+                    <p class="text-muted mb-0">Visit us next to the Bus Rank or send a message — we reply within one business day.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-hero-img">
+                        <img src="images/contact image.jpg" alt="Factory Fades shop" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+                <div class="col-lg-5">
+                    <div class="mb-4">
+                        <h2 class="h6 text-uppercase text-gold mb-3" style="letter-spacing: 0.15em;">Contact details</h2>
+                        <p class="mb-2"><strong>Next to Bus Rank, Letlhakane</strong></p>
+                        <p class="mb-2"><i class="fas fa-phone text-gold me-2"></i> <a href="tel:+26771234567" class="text-white text-decoration-none">+267 71 234 567</a></p>
+                        <p class="mb-2"><i class="fas fa-envelope text-gold me-2"></i> <a href="mailto:hello@factoryfades.co.bw" class="text-white text-decoration-none">hello@factoryfades.co.bw</a></p>
+                        <p class="mb-0"><i class="fas fa-clock text-gold me-2"></i> Mon–Sat: 8:00 AM – 6:00 PM</p>
+                    </div>
+                    <div class="map-embed-clean">
+                        <iframe src="https://www.google.com/maps?q=-21.4208,25.5959&hl=en&z=16&output=embed" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" title="Map · Letlhakane Bus Rank area (approximate)"></iframe>
+                    </div>
+                    <p class="small text-muted text-center mt-2 mb-0">Approximate · Bus Rank area</p>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card border-0 service-card h-100">
+                        <div class="card-body p-4 p-md-5 d-flex flex-column" style="min-height: 480px;">
+                            <h2 class="h5 text-uppercase mb-4" style="letter-spacing: 0.12em;">Send us a message</h2>
+                            <form id="contactForm" class="d-flex flex-column flex-grow-1">
+                                <div class="mb-3">
+                                    <label class="form-label small text-uppercase text-muted" for="contactName" style="letter-spacing: 0.08em;">Name</label>
+                                    <input type="text" class="form-control" id="contactName" name="name" placeholder="Your name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label small text-uppercase text-muted" for="contactEmail" style="letter-spacing: 0.08em;">Email</label>
+                                    <input type="email" class="form-control" id="contactEmail" name="email" placeholder="you@example.com" required>
+                                </div>
+                                <div class="mb-3 flex-grow-1 d-flex flex-column">
+                                    <label class="form-label small text-uppercase text-muted" for="contactMessage" style="letter-spacing: 0.08em;">Message</label>
+                                    <textarea class="form-control flex-grow-1" id="contactMessage" name="message" rows="8" placeholder="How can we help?" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-gold w-100 py-3 fw-bold text-uppercase mt-auto" style="letter-spacing: 0.08em;">Send message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-strip">
+        <div class="container cta-inner">
+            <p class="text-white">Ready for your fresh cut? Book your appointment today</p>
+            <a href="booking.html" class="btn btn-gold btn-sm px-4 text-uppercase fw-bold" style="letter-spacing: 0.1em; font-size: 0.75rem;">Book Now</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/FACTORY%20FADES%20LOGO.png" alt="Logo" width="42" height="42" class="rounded-2 me-2">
+                        <span class="fw-bold text-white" style="letter-spacing: 0.1em;">FACTORY FADES</span>
+                    </div>
+                    <p class="small">Letlhakane · Bus Rank</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Explore</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li class="mb-2"><a href="booking.html">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Newsletter</h5>
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control-sm" placeholder="Email" aria-label="Newsletter email">
+                        <button class="btn btn-gold btn-sm" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start small">&copy; 2026 Factory Fades</div>
+                <div class="col-md-6 text-center text-md-end small mt-2 mt-md-0"><a href="#" class="text-decoration-none text-muted">Privacy</a> · <a href="#" class="text-decoration-none text-muted">Terms</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" id="scrollTopBtn" class="scroll-top-btn" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
