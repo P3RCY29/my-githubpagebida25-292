@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Appointment | Factory Fades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/FACTORY%20FADES%20LOGO.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-uppercase">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/FACTORY%20FADES%20LOGO.png" alt="Factory Fades Logo" width="44" height="44" class="rounded-2">
+                <span class="ms-2 d-none d-sm-inline fw-bold" style="letter-spacing: 0.1em;">FACTORY FADES</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promotions.html">Promotions</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="booking.html">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="ms-lg-3 mt-3 mt-lg-0">
+                    <a href="booking.html" class="btn btn-gold btn-sm px-4 text-uppercase fw-bold" style="letter-spacing: 0.1em; font-size: 0.75rem;">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-4 py-lg-5 border-bottom border-secondary border-opacity-25">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <p class="small text-gold text-uppercase mb-2" style="letter-spacing: 0.2em;">Online booking</p>
+                    <h1 class="text-white mb-3" style="font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 6vw, 3.25rem); letter-spacing: 0.06em;">Book an appointment</h1>
+                    <p class="text-muted mb-0">Choose your service, barber, date, and time — we’ll confirm by SMS &amp; email.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual mb-0">
+                        <img src="images/Jaques barbershop.jpg" alt="Lead barber Alfred" class="w-100" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row g-4 g-lg-5">
+            <div class="col-lg-7">
+                <div class="card border-0 service-card h-100">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="h5 text-uppercase mb-4" style="letter-spacing: 0.12em;">Appointment details</h2>
+                        <form id="bookingForm">
+                            <div class="row g-3">
+                                <!-- Service Selection -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Select Service <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="service" name="service" required>
+                                        <option value="">Choose a service...</option>
+                                        <optgroup label="Men's Services">
+                                            <option value="high-fade">Skin Fade - BWP 100</option>
+                                            <option value="textured-crop">Taper Fade - BWP 100</option>
+                                            <option value="pompadour">Low Fade Pompadour - BWP 95</option>
+                                            <option value="buzz-cut">Buzz Cut + Design - BWP 70</option>
+                                            <option value="beard-trim">Beard Trim &amp; Shape - BWP 55</option>
+                                            <option value="kids-cut">Kids Cut (Under 12) - BWP 60</option>
+                                        </optgroup>
+                                        <optgroup label="Women's Services">
+                                            <option value="pixie-cut">Chic Pixie Cut - BWP 120</option>
+                                            <option value="short-bob">Ladies cut - BWP 100</option>
+                                            <option value="undercut">Undercut with Design - BWP 150</option>
+                                            <option value="asymmetrical">Asymmetrical Crop - BWP 120</option>
+                                        </optgroup>
+                                        
+                                    </select>
+                                </div>
+
+                                <!-- Preferred Barber -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Preferred Barber (Optional)</label>
+                                    <select class="form-select" id="barber" name="barber">
+                                        <option value="">No preference</option>
+                                        <option value="percy">Alfred </option>
+                                        <option value="thato">Thato </option>
+                                        <option value="kagiso">Kagiso</option>
+                                    </select>
+                                </div>
+
+                                <!-- Date -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Preferred Date <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="date" name="date" required>
+                                </div>
+
+                                <!-- Time -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Preferred Time <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="time" name="time" required>
+                                        <option value="">Select time...</option>
+                                        <option value="08:00">08:00 AM</option>
+                                        <option value="08:30">08:30 AM</option>
+                                        <option value="09:00">09:00 AM</option>
+                                        <option value="09:30">09:30 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="10:30">10:30 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="11:30">11:30 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="12:30">12:30 PM</option>
+                                        <option value="13:00">01:00 PM</option>
+                                        <option value="13:30">01:30 PM</option>
+                                        <option value="14:00">02:00 PM</option>
+                                        <option value="14:30">02:30 PM</option>
+                                        <option value="15:00">03:00 PM</option>
+                                        <option value="15:30">03:30 PM</option>
+                                        <option value="16:00">04:00 PM</option>
+                                        <option value="16:30">04:30 PM</option>
+                                        <option value="17:00">05:00 PM</option>
+                                        <option value="17:30">05:30 PM</option>
+                                    </select>
+                                </div>
+
+                                <!-- Personal Info -->
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Phone Number <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+267 71 234 567" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Special Requests / Notes</label>
+                                    <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="E.g. First time client, want a high fade with textured top, allergic to certain products..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-check mt-4 mb-3">
+                                <input class="form-check-input" type="checkbox" id="terms" required>
+                                <label class="form-check-label small" for="terms">
+                                    I agree to the <a href="#" class="text-gold">cancellation policy</a> and confirm this is a real booking request.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold btn-lg w-100 py-3 fw-bold">
+                                <i class="fas fa-calendar-check me-2"></i> CONFIRM BOOKING
+                            </button>
+                            
+                            <p class="text-center small text-muted mt-3 mb-0">You will receive a confirmation SMS and email within 5 minutes.</p>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="small text-muted">Need help? <a href="tel:+26771234567" class="text-gold fw-semibold">+267 71 234 567</a></p>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="booking-calendar-panel h-100 mb-4">
+                    <div class="cal-head text-white">
+                        <span class="opacity-75"><i class="fas fa-chevron-left fa-sm"></i></span>
+                        <span>April 2026</span>
+                        <span class="opacity-75"><i class="fas fa-chevron-right fa-sm"></i></span>
+                    </div>
+                    <p class="small text-muted text-center mb-3">Pick your preferred date on the booking form — use this preview as a quick reference.</p>
+                    <div class="cal-grid mb-1">
+                        <span class="cal-dow">S</span>
+                        <span class="cal-dow">M</span>
+                        <span class="cal-dow">T</span>
+                        <span class="cal-dow">W</span>
+                        <span class="cal-dow">T</span>
+                        <span class="cal-dow">F</span>
+                        <span class="cal-dow">S</span>
+                    </div>
+                    <div class="cal-grid pb-3 border-bottom border-secondary border-opacity-25">
+                        <span class="cal-day"></span><span class="cal-day"></span><span class="cal-day"></span><span class="cal-day"></span><span class="cal-day"></span><span class="cal-day">1</span><span class="cal-day">2</span>
+                        <span class="cal-day">3</span><span class="cal-day">4</span><span class="cal-day">5</span><span class="cal-day">6</span><span class="cal-day">7</span><span class="cal-day">8</span><span class="cal-day">9</span>
+                        <span class="cal-day">10</span><span class="cal-day">11</span><span class="cal-day">12</span><span class="cal-day">13</span><span class="cal-day active">14</span><span class="cal-day">15</span><span class="cal-day">16</span>
+                        <span class="cal-day">17</span><span class="cal-day">18</span><span class="cal-day">19</span><span class="cal-day">20</span><span class="cal-day">21</span><span class="cal-day">22</span><span class="cal-day">23</span>
+                        <span class="cal-day">24</span><span class="cal-day">25</span><span class="cal-day">26</span><span class="cal-day">27</span><span class="cal-day">28</span><span class="cal-day">29</span><span class="cal-day">30</span>
+                    </div>
+                    <p class="small text-muted mb-0 mt-3 text-center"><i class="fas fa-calendar-alt text-gold me-1"></i> Booking calendar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header border-0 bg-gold text-black">
+                    <h5 class="modal-title fw-bold"><i class="fas fa-check-circle me-2"></i> Booking Confirmed!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-center">
+                    <div class="mb-4">
+                        <i class="fas fa-calendar-check fa-4x text-gold"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">You're all set, <span id="modalName"></span>!</h4>
+                    <p class="mb-1">Your appointment for <strong id="modalService"></strong> has been booked for:</p>
+                    <p class="fs-5 fw-semibold text-gold mb-4" id="modalDateTime"></p>
+                    
+                    <div class="alert alert-light border text-start small">
+                        <strong>What happens next?</strong><br>
+                        • You will receive a confirmation SMS &amp; email shortly.<br>
+                        • Please arrive 5 minutes early.<br>
+                        • If you need to reschedule, call us at least 4 hours in advance.
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <button type="button" class="btn btn-gold px-5" data-bs-dismiss="modal">Done</button>
+                    <a href="index.html" class="btn btn-outline-secondary px-4">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-strip">
+        <div class="container cta-inner">
+            <p class="text-white">Ready for your fresh cut? Book your appointment today</p>
+            <a href="booking.html" class="btn btn-gold btn-sm px-4 text-uppercase fw-bold" style="letter-spacing: 0.1em; font-size: 0.75rem;">Book Now</a>
+        </div>
+    </div>
+
+    <footer class="mt-0">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="images/FACTORY%20FADES%20LOGO.png" alt="Logo" width="42" height="42" class="me-2 rounded-2">
+                        <span class="fw-bold text-white fs-4">FACTORY FADES</span>
+                    </div>
+                    <p class="small">Premium barbershop offering modern hairstyles for men and women of all ages in Letlhakane.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="about.html">Our Story</a></li>
+                        <li class="mb-2"><a href="services.html">Services &amp; Prices</a></li>
+                        <li class="mb-2"><a href="promotions.html">Current Deals</a></li>
+                        <li class="mb-2"><a href="booking.html">Online Booking</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-gold"></i> Next to Bus Rank, Letlhakane, Botswana</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2 text-gold"></i> +267 71 234 567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2 text-gold"></i> hello@factoryfades.co.bw</li>
+                        <li><i class="fas fa-clock me-2 text-gold"></i> Mon–Sat: 8:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5>Newsletter</h5>
+                    <p class="small">Get 10% off your first visit + style tips straight to your inbox.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control-sm" placeholder="Your email">
+                        <button class="btn btn-gold btn-sm" type="button">Join</button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 border-secondary">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start small">
+                    &copy; 2026 Factory Fades · Letlhakane
+                </div>
+                <div class="col-md-6 text-center text-md-end small mt-2 mt-md-0">
+                    <a href="#" class="text-decoration-none text-muted">Privacy</a> • 
+                    <a href="#" class="text-decoration-none text-muted">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button type="button" id="scrollTopBtn" class="scroll-top-btn" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date();
+        const minDate = today.toISOString().split('T')[0];
+        dateInput.setAttribute('min', minDate);
+        dateInput.value = minDate; // default to today
+
+        // Handle form submission
+        const bookingForm = document.getElementById('bookingForm');
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const serviceSelect = document.getElementById('service');
+            const serviceText = serviceSelect.options[serviceSelect.selectedIndex].text;
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const barberVal = document.getElementById('barber').value;
+            const barberNames = { percy: 'Alfred', thato: 'Thato', kagiso: 'Kagiso' };
+            const barber = barberVal ? (barberNames[barberVal] || barberVal) : 'Any available barber';
+            
+            // Format date nicely
+            const dateObj = new Date(date);
+            const formattedDate = dateObj.toLocaleDateString('en-GB', { 
+                weekday: 'long', 
+                day: 'numeric', 
+                month: 'long' 
+            });
+            
+            // Populate modal
+            document.getElementById('modalName').textContent = name.split(' ')[0];
+            document.getElementById('modalService').textContent = serviceText;
+            document.getElementById('modalDateTime').innerHTML = `${formattedDate} at <strong>${time}</strong><br><small>with ${barber}</small>`;
+            
+            // Show success modal
+            successModal.show();
+            
+            // Reset form after modal closes (optional)
+            document.getElementById('successModal').addEventListener('hidden.bs.modal', function () {
+                bookingForm.reset();
+                dateInput.value = minDate;
+            }, { once: true });
+            
+            // In a real app, you would send this data to a server here
+            console.log('Booking submitted:', {
+                service: serviceText,
+                name: name,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                date: date,
+                time: time,
+                barber: barber,
+                notes: document.getElementById('notes').value
+            });
+        });
+
+        // Optional: Pre-fill service if coming from services page with ?service=xxx
+        const urlParams = new URLSearchParams(window.location.search);
+        const preService = urlParams.get('service');
+        if (preService) {
+            const serviceSelect = document.getElementById('service');
+            for (let i = 0; i < serviceSelect.options.length; i++) {
+                if (serviceSelect.options[i].value === preService) {
+                    serviceSelect.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
